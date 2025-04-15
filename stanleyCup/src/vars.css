@@ -1,0 +1,12 @@
+:root {
+  /*colours*/
+  --color-text: #101010;
+  --color-secondary: #c63773;
+  --color-bg: #ffffff;
+  --color-bg--secondary: #f8f8f8;
+
+  /*text*/
+  --font-branding: "KnockOut", sans-serif;
+  --font-iphone: "San Francisco", sans-serif;
+  --font-body: "Instruments Sans", sans-serif;
+}
