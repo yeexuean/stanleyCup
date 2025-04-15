@@ -1,30 +1,23 @@
 import styles from "./Navbar.module.css";
+import { images } from "@assets/images";
 
 export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <img
-        className={styles.logo}
-        src="../assets/images/stanleyLogo.svg"
-        alt="Stanley Logo"
-      ></img>
+      <img className={styles.logo} src={images.logo} alt="Stanley Logo"></img>
 
       <div className={styles.menuBtn}>
-        <img
-          className={styles.menu}
-          src="../assets/images/searchIcon.svg"
-          alt="Search Bar"
-        ></img>
+        <img className={styles.menu} src={images.search} alt="Search Bar"></img>
 
         <img
           className={styles.menu}
-          src="../assets/images/cartIcon.svg"
+          src={images.cart}
           alt="Shopping Cart"
         ></img>
 
         <img
           className={styles.menu}
-          src="../assets/images/hamburgerIcon.svg"
+          src={images.hamburger}
           alt="Hamburger Menu"
         ></img>
       </div>

@@ -1,4 +1,5 @@
 import styles from "./Product.module.css";
+import { images } from "@assets/images";
 
 export const Product = () => {
   return (
@@ -12,13 +13,13 @@ export const Product = () => {
       <div className={styles.productImageContainer}>
         <img
           className={styles.productImage}
-          src="/assets/images/stanleyCup.svg"
+          src={images.stanleyCup}
           alt="Stanley Cup"
         />
       </div>
 
       <button className={styles.button3D}>
-        <img src="/assets/images/_3dicon.svg" alt="3D ICON"></img>
+        <img src={images.view3d} alt="3D ICON"></img>
         <p>View in 3D</p>
       </button>
 
@@ -37,19 +38,19 @@ export const Product = () => {
       {/* different color options */}
       <div className={styles.colorOptionsContainer}>
         <div className={styles.colourOptions}>
-          <img src="/assets/images/stanleyCup.svg" alt="Stanley Cup" />
+          <img src={images.stanleyCup} alt="Stanley Cup" />
         </div>
 
         <div className={styles.colourOptions}>
-          <img src="/assets/images/stanleyCup.svg" alt="Stanley Cup" />
+          <img src={images.stanleyCup} alt="Stanley Cup" />
         </div>
 
         <div className={styles.colourOptions}>
-          <img src="/assets/images/stanleyCup.svg" alt="Stanley Cup" />
+          <img src={images.stanleyCup} alt="Stanley Cup" />
         </div>
 
         <div className={styles.colourOptions}>
-          <img src="/assets/images/stanleyCup.svg" alt="Stanley Cup" />
+          <img src={images.stanleyCup} alt="Stanley Cup" />
         </div>
       </div>
 
@@ -73,17 +74,17 @@ export const Product = () => {
 
       <div className={styles.temperature}>
         <div className={styles.temperatureRow}>
-          <img src="/assets/images/hot.svg" />
+          <img src={images.hot} />
           <p>N/A</p>
         </div>
 
         <div className={styles.temperatureRow}>
-          <img src="/assets/images/cold.svg" alt="Cold" />
+          <img src={images.cold} alt="Cold" />
           <p>9 HRS</p>
         </div>
 
         <div className={styles.temperatureRow}>
-          <img src="/assets/images/ice.svg" alt="Ice" />
+          <img src={images.ice} alt="Ice" />
           <p>40 HRS</p>
         </div>
       </div>
