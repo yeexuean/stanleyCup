@@ -4,7 +4,7 @@ import { Product } from "./components/first/Product/Product";
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div style={{ minHeight: "100vh" }} className={styles.App}>
       <Navbar />
       <Product />
     </div>
