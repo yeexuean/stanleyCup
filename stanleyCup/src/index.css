@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: var(--font-branding), Arial, Helvetica, sans-serif;
-  font-family: var(--font-iphone), Arial, Helvetica, sans-serif;
+  font-family: var(--font-branding), Arial, Helvetica, serif;
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }
 

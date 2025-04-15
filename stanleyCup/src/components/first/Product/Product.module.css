@@ -1,0 +1,152 @@
+.container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font: var(--font-branding);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.priceHeader {
+  margin-bottom: 1.5rem;
+}
+
+.productImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-bg--secondary);
+  padding: 5rem 2rem;
+  margin-bottom: 1.5rem;
+  z-index: 0;
+}
+
+.productImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button3D {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border: 1.5px solid #2690ca;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  width: 35%;
+  color: #2690ca;
+  margin-bottom: 2rem;
+  z-index: 1;
+  bottom: 85px;
+  left: 20px;
+}
+
+.button3D:hover {
+  cursor: pointer;
+  background-color: #f4fbff;
+}
+
+.pageIndicator {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -4.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pageIndicatordots {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.colourName {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+/*need to do js to change colour when the image changes*/
+.colorOptionsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.colourOptions {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-bg--secondary);
+  padding: 0.8rem 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.colourOptions img {
+  width: 100%;
+  height: 100%;
+}
+
+/*price column*/
+.priceColumn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.quantityOptions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: gray;
+}
+
+.quantitySelect {
+  background-color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: gray;
+}
+
+.priceBottom {
+  font-weight: bold;
+}
+
+.addToCart {
+  background-color: var(--color-text);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.temperatureRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
