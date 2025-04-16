@@ -9,7 +9,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 //able to import gltf file
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-export default function StanleyCupModel() {
+export const StanleyCupModel = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -97,4 +97,4 @@ export default function StanleyCupModel() {
     };
   }, []);
   return <div ref={mountRef} style={{ width: "100%", height: "100vh" }} />;
-}
+};

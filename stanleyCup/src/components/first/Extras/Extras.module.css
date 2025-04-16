@@ -1,0 +1,85 @@
+@import "../../../styles/vars.css";
+
+.container {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.addon h2 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.addonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bootsImages {
+  width: 30%;
+  height: 30%;
+  padding: 0.5rem 0;
+  background-color: var(--color-bg--secondary);
+}
+
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewContainer h2 {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.reviewSubheading {
+  margin-bottom: 1rem;
+}
+
+.starsReview {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.starBox {
+  border: 1px solid #81234d;
+  border-radius: 0.1rem;
+  padding: 0.5rem;
+}
+
+.firstReview {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid gray;
+}
+
+.questionBox {
+  background-color: var(--color-bg--secondary);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  border-bottom: 1px solid gray;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.question img {
+  width: 8px;
+  height: 8px;
+}

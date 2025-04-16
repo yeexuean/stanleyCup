@@ -9,6 +9,8 @@ import cold from "./images/cold.svg";
 import cart from "./images/cartIcon.svg";
 import background from "./images/background.svg";
 import view3d from "./images/_3dicon.svg";
+import stars from "./images/stars.svg";
+import bootStraw from "./images/bootStraw.png";
 
 export const images = {
   logo,
@@ -22,4 +24,6 @@ export const images = {
   cart,
   background,
   view3d,
+  stars,
+  bootStraw,
 };

@@ -1,5 +1,6 @@
 import styles from "./Product.module.css";
 import { images } from "@assets/images";
+import { Link } from "react-router-dom";
 
 export const Product = () => {
   return (
@@ -18,10 +19,10 @@ export const Product = () => {
         />
       </div>
 
-      <button className={styles.button3D}>
-        <img src={images.view3d} alt="3D ICON"></img>
+      <Link to="/3d-view" className={styles.button3D}>
+        <img src={images.view3d} alt="3D icon" />
         <p>View in 3D</p>
-      </button>
+      </Link>
 
       <div className={styles.pageIndicator}>
         <div className={styles.pageIndicatordots}></div>
