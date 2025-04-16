@@ -55,11 +55,11 @@ export const StanleyCupModel = () => {
     let cup;
 
     loader.load(
-      import.meta.env.BASE_URL + "stanleyCup.glb",
+      import.meta.env.BASE_URL + "BerryTruffleCup.glb",
       (gltf) => {
         cup = gltf.scene;
         cup.scale.set(1.5, 1.5, 1.5);
-        cup.position.set(0, -0.5, 0); //higher abit
+        cup.position.set(0, -3, 0); //higher abit
         scene.add(cup);
       },
       undefined,

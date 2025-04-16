@@ -14,6 +14,10 @@ import bootStraw from "./images/bootStraw.png";
 import basket from "./images/basket.svg";
 import ar from "./images/ar.svg";
 import customised from "./images/customised.svg";
+import cup2 from "./images/cup2.png";
+import cup3 from "./images/cup3.png";
+import cup4 from "./images/cup4.jpg";
+import cup5 from "./images/cup5.jpg";
 
 export const images = {
   logo,
@@ -32,4 +36,8 @@ export const images = {
   basket,
   ar,
   customised,
+  cup2,
+  cup3,
+  cup4,
+  cup5,
 };
