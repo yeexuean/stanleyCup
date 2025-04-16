@@ -142,6 +142,10 @@
   cursor: pointer;
 }
 
+.addToCart:hover {
+  background-color: black;
+}
+
 .temperature {
   display: flex;
   justify-content: center;
