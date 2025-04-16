@@ -19,6 +19,14 @@
   text-transform: uppercase;
 }
 
+.header img {
+  transition: transform 0.3s ease;
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
 .content {
   margin-bottom: 1.5rem;
   line-height: 1.3rem;
