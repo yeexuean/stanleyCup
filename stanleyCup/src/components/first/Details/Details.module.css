@@ -1,1 +1,44 @@
 @import "../../../styles/vars.css";
+
+.container {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg--secondary);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.header h2 {
+  text-transform: uppercase;
+}
+
+.content {
+  margin-bottom: 1.5rem;
+  line-height: 1.3rem;
+}
+
+.specsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.dimensions {
+  margin-bottom: 1.5rem;
+  line-height: 1.4rem;
+}
