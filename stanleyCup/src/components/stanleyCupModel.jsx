@@ -29,20 +29,25 @@ export const StanleyCupModel = () => {
 
     //renderer setup
     const renderer = new THREE.WebGLRenderer({ alpha: true }); //makes bg transparent
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    const { clientWidth, clientHeight } = mountRef.current;
+    renderer.setSize(clientWidth, clientHeight);
     renderer.setClearColor(0x000000, 0); //transparent bg
-    //add the renderer to the DOM
+    //add the renderer tos the DOM
     mountRef.current.appendChild(renderer.domElement);
 
     //set how far the camera will be from the 3d model
-    camera.position.z = 5;
+    camera.position.z = 3.5;
 
     //add lights to the scene, so we can actually see the model
-    const topLight = new THREE.DirectionalLight(0xffffff, 1); //color, intesity
-    topLight.position.set(500, 500, 500); //arnd top left ish
+    const topLight = new THREE.DirectionalLight(0xffffff, 4); //color, intesity
+    topLight.position.set(10, 10, 10); //arnd top left ish
     scene.add(topLight);
 
-    const ambientLight = new THREE.AmbientLight(0x333333, 1);
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    fillLight.position.set(-10, -10, -10);
+    scene.add(fillLight);
+
+    const ambientLight = new THREE.AmbientLight(0x333333, 0.6);
     scene.add(ambientLight);
 
     //load the cup model
@@ -50,11 +55,11 @@ export const StanleyCupModel = () => {
     let cup;
 
     loader.load(
-      "/stanleyCup/stanleyCup.glb",
+      import.meta.env.BASE_URL + "stanleyCup.glb",
       (gltf) => {
         cup = gltf.scene;
-        cup.scale.set(5, 5, 5);
-        cup.position.set(0, -1.5, 0);
+        cup.scale.set(1.5, 1.5, 1.5);
+        cup.position.set(0, -0.5, 0); //higher abit
         scene.add(cup);
       },
       undefined,
@@ -74,9 +79,10 @@ export const StanleyCupModel = () => {
 
     //handle window resize
     const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      const { clientWidth, clientHeight } = mountRef.current;
+      camera.aspect = clientWidth / clientHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(clientWidth, clientHeight);
     };
     window.addEventListener("resize", handleResize);
 
@@ -92,9 +98,9 @@ export const StanleyCupModel = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       if (mountRef.current) {
-        mountRef.current.removeChild(renderer.odmElement);
+        mountRef.current.removeChild(renderer.domElement);
       }
     };
   }, []);
-  return <div ref={mountRef} style={{ width: "100%", height: "100vh" }} />;
+  return <div ref={mountRef} style={{ width: "100%", height: "100%" }} />;
 };

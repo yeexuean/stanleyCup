@@ -1,1 +1,141 @@
 @import "../../../styles/vars.css";
+
+.container {
+  font-size: 0.8rem;
+}
+
+.grayBG {
+  background-color: rgb(202, 202, 202);
+  width: 100%;
+  height: 8rem;
+  cursor: pointer;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg--secondary);
+  padding: 2rem;
+  z-index: 0;
+}
+
+.header h2 {
+  width: 85%;
+  margin-bottom: 1rem;
+}
+
+.header img {
+  padding: 5rem 0;
+  margin-bottom: 2rem;
+}
+
+.modelContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.colorContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1;
+  bottom: 80px;
+}
+
+.colorOptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorOptions p {
+  margin-bottom: 1rem;
+}
+
+.colorRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 0.5rem;
+}
+
+.colorChoice {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.colorChoice:hover {
+  transform: scale(1.1);
+  border: 1px solid gray;
+}
+
+.colorChoice.selected {
+  border: 1px solid rgb(39, 39, 39);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #aa2977;
+  transform: scale(1.05);
+}
+
+.button img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.extras {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 0 2rem;
+  padding-left: 3rem;
+  margin-top: -1rem;
+}
+
+.extraThing {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.extraThing img {
+  background-color: var(--color-bg--secondary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.extraDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.extraDescription p {
+  font-size: 0.8rem;
+}

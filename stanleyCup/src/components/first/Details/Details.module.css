@@ -6,6 +6,7 @@
   flex-direction: column;
   background-color: var(--color-bg--secondary);
   font-size: 0.8rem;
+  padding-bottom: 0;
 }
 
 .header {

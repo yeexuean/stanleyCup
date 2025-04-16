@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styles from "./App.module.css";
-import Home from "./pages/Home";
+import { Home } from "./pages/Home";
 import { View3D } from "./pages/View3D";
 
 function App() {
@@ -12,8 +12,6 @@ function App() {
           <Route path="/3d-view" element={<View3D />}></Route>
         </Routes>
       </BrowserRouter>
-
-      <StanleyCupModel />
     </div>
   );
 }

@@ -11,6 +11,9 @@ import background from "./images/background.svg";
 import view3d from "./images/_3dicon.svg";
 import stars from "./images/stars.svg";
 import bootStraw from "./images/bootStraw.png";
+import basket from "./images/basket.svg";
+import ar from "./images/ar.svg";
+import customised from "./images/customised.svg";
 
 export const images = {
   logo,
@@ -26,4 +29,7 @@ export const images = {
   view3d,
   stars,
   bootStraw,
+  basket,
+  ar,
+  customised,
 };
