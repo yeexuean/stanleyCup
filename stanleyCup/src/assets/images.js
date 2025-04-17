@@ -16,8 +16,8 @@ import ar from "./images/ar.svg";
 import customised from "./images/customised.svg";
 import cup2 from "./images/cup2.png";
 import cup3 from "./images/cup3.png";
-import cup4 from "./images/cup4.jpg";
-import cup5 from "./images/cup5.jpg";
+import cup4 from "./images/cup4.jpeg";
+import cup5 from "./images/cup5.jpeg";
 
 export const images = {
   logo,
