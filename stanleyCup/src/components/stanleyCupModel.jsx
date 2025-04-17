@@ -39,11 +39,11 @@ export const StanleyCupModel = () => {
     camera.position.z = 3.5;
 
     //add lights to the scene, so we can actually see the model
-    const topLight = new THREE.DirectionalLight(0xffffff, 4); //color, intesity
-    topLight.position.set(10, 10, 10); //arnd top left ish
+    const topLight = new THREE.DirectionalLight(0xffffff, 10); //color, intesity
+    topLight.position.set(10, 10, 10);
     scene.add(topLight);
 
-    const fillLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.8);
     fillLight.position.set(-10, -10, -10);
     scene.add(fillLight);
 
@@ -60,6 +60,18 @@ export const StanleyCupModel = () => {
         cup = gltf.scene;
         cup.scale.set(1.5, 1.5, 1.5);
         cup.position.set(0, -3, 0); //higher abit
+
+        gltf.scene.traverse((child) => {
+          if (child.isMesh && child.name.toLowerCase().includes("lid")) {
+            child.material.transparent = true;
+            child.material.opacity = 0.3;
+            child.material.depthWrite = false;
+          } else if (child.isMesh) {
+            child.material.transparent = false;
+            child.material.opacity = 1;
+          }
+        });
+
         scene.add(cup);
       },
       undefined,

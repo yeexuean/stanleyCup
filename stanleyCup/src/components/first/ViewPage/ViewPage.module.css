@@ -23,6 +23,7 @@
 .header h2 {
   width: 85%;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .header img {

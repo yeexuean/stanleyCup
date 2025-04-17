@@ -54,7 +54,9 @@ const colorVariants = {
 
 export const Product = () => {
   const [selectedColor, setSelectedColor] = useState("Berry Truffle");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState(null);
+  const paginationEL = `.${styles.customPagination}`;
+
   return (
     <section className={styles.container}>
       <h1 className={styles.heading}>
@@ -66,11 +68,14 @@ export const Product = () => {
       {/* image swipe section */}
       <div className={styles.productImageContainer}>
         <Swiper
+          onSwiper={setSwiperInstance}
           modules={[Pagination]}
-          pagination={{ clickable: true }}
+          pagination={{
+            clickable: true,
+            el: paginationEL,
+          }}
           spaceBetween={20}
           slidesPerView={1}
-          onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
           className={styles.swiperContainer}
         >
           {colorVariants[selectedColor].map((img, i) => (
@@ -85,12 +90,14 @@ export const Product = () => {
         </Swiper>
       </div>
 
+      <div className={styles.customPagination}></div>
+
       <Link to="/3d-view" className={styles.button3D}>
         <img src={images.view3d} alt="3D icon" />
         <p>View in 3D</p>
       </Link>
 
-      <div className={styles.pageIndicator}>
+      {/* <div className={styles.pageIndicator}>
         {colorVariants[selectedColor].map((_, i) => (
           <div
             key={i}
@@ -99,10 +106,10 @@ export const Product = () => {
             }`}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className={styles.colourName}>
-        <p>Color: Berry Truffle</p>
+        <p>Color: {selectedColor}</p>
       </div>
 
       {/* different color options */}
@@ -114,8 +121,8 @@ export const Product = () => {
               selectedColor === colorName ? styles.selected : " "
             }`}
             onClick={() => {
+              swiperInstance?.slideTo(0);
               setSelectedColor(colorName);
-              setCurrentIndex(0); //reset to first pic
             }}
           >
             <img

@@ -72,14 +72,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.6rem;
+  line-height: 1.4;
   border-bottom: 1px solid gray;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
 
+.question.selected {
+  border: none;
+}
+
 .question img {
   width: 8px;
   height: 8px;
+}
+
+.answer {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 1.5rem;
+  margin-top: -2rem;
+}
+
+.open {
+  transform: rotate(180deg);
 }
